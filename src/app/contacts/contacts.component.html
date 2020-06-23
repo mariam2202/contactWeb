@@ -1,7 +1,25 @@
-<div>
-  <p>Détail du contact </p>
-  <p>nom : {{ contact.nom }}</p>
-  <p>prénom : {{ contact.prenom }}</p>
-  <p>nom : {{ contact.dateNaissance }}</p>
+<!--<div>-->
+<!--  <p>Détail du contact </p>-->
+<!--  <p>nom : {{ contact?.nom }}</p>-->
+<!--  <p>prénom : {{ contact?.prenom }}</p>-->
+<!--  <p>nom : {{ contact?.dateNaissance }}</p>-->
+<!--</div>-->
 
+<div class="container spacer">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Liste des contacts</div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <tr>
+          <th>Nom</th>
+          <th>Prenom</th>
+        </tr>
+
+        <tr *ngFor='let c of contacts'>
+          <td>{{ c.nom }}</td>
+          <td>{{ c.prenom }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
