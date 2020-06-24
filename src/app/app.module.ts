@@ -9,18 +9,23 @@ import {HttpModule} from '@angular/http';
 import {ContactsService} from '../services/contacts.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NewContactComponent } from './new-contact/new-contact.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
-    AboutComponent
+    AboutComponent,
+    NewContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
   ],
   providers: [ContactsService],
   bootstrap: [AppComponent]

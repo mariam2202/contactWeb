@@ -1,5 +1,5 @@
-export interface Contact {
-  id?: number;
+export class Contact {
+  id: number;
   nom: string;
   prenom: string;
   dateNaissance: string;
