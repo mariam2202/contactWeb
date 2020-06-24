@@ -12,4 +12,8 @@ export class ContactsService {
   findAll(){
     return this.http.get<Contact[]>('http://localhost:9090/Contacts');
   }
+
+  findByName(name: string){
+    return this.http.get<Contact[]>('http://localhost:9090/ChercherParNomContacts?monContact=' + name);
+  }
 }

@@ -9,15 +9,30 @@
   <div class="panel panel-primary">
     <div class="panel-heading">Liste des contacts</div>
     <div class="panel-body">
+      <div class="form-group">
+        <label>Mot Clé:</label>
+        <input type="text" [(ngModel)]="motCle" />
+        <button class="btn btn-primary" (click)="chercher()">Chercher</button>
+      </div>
       <table class="table table-striped">
         <tr>
+          <th>ID</th>
           <th>Nom</th>
           <th>Prenom</th>
+          <th>Date Naissance</th>
+          <th>EMail</th>
+          <th>Tel</th>
+          <th>Photo</th>
         </tr>
 
         <tr *ngFor='let c of contacts'>
+          <td>{{ c.id }}</td>
           <td>{{ c.nom }}</td>
           <td>{{ c.prenom }}</td>
+          <td>{{ c.dateNaissance | date :'short'}}</td>
+          <td>{{ c.email }}</td>
+          <td type="tel">{{ c.tel }}</td>
+          <td>{{ c.photo }}</td>
         </tr>
       </table>
     </div>

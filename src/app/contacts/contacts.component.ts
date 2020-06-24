@@ -10,6 +10,7 @@ export class ContactsComponent implements OnInit {
   // contact = {nom: 'Derruette', prenom: 'Elik', dateNaissance: '1960-11-25', email: 'maroaslan@hotmail.com', tel: 106578216, photo: './Image/IMG_2.jpg'};
 
   contacts = [];
+  motCle = '';
 
   constructor(private contactsService: ContactsService) {
   }
@@ -19,8 +20,11 @@ export class ContactsComponent implements OnInit {
   }
 
   getContacts() {
-    this.contactsService.findAll()
+    this.contactsService.findByName(this.motCle)
       .subscribe(contacts => this.contacts = contacts);
+  }
+  chercher() {
+    this.getContacts();
   }
 }
 
