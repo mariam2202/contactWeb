@@ -11,13 +11,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NewContactComponent } from './new-contact/new-contact.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
     AboutComponent,
-    NewContactComponent
+    NewContactComponent,
+    NouveauContactComponent
   ],
   imports: [
     BrowserModule,
