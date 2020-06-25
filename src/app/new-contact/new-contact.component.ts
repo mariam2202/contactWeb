@@ -10,25 +10,26 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class NewContactComponent implements OnInit {
 
-
-  public contact = new Contact();
-
   constructor(private contactsService: ContactsService, private spinner: NgxSpinnerService) { }
 
-  ngOnInit(): void {
-  }
+  public contact = new Contact();
 /*
   saveContact(contact: Contact){
     // console.log(this.contact);
     this.contactsService.saveContact(contact);
   }
 */
+  mode = 1;
+
+  ngOnInit(): void {
+  }
   saveContact(contact: Contact){
       this.spinner.show();
       this.contactsService.saveContact(contact).subscribe(
               (result: Contact) => {
                  if (result.id){
                     this.spinner.hide();
+                    this.mode = 2;
                     // this.buildMessageModal('Save operation correctly done');
                  }
               },
