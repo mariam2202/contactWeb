@@ -12,6 +12,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NewContactComponent } from './new-contact/new-contact.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.component';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.compo
     ContactsComponent,
     AboutComponent,
     NewContactComponent,
-    NouveauContactComponent
+    NouveauContactComponent,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,

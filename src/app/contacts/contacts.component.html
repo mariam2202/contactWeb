@@ -23,6 +23,7 @@
           <th>EMail</th>
           <th>Tel</th>
           <th>Photo</th>
+          <th></th>
         </tr>
 
         <tr *ngFor='let c of contacts; let i=index'>
@@ -33,6 +34,8 @@
           <td>{{ c.email }}</td>
           <td type="tel">{{ c.tel }}</td>
           <td>{{ c.photo }}</td>
+          <td>
+            <a class="clickable" (click)="onEditContact(c.id)" >Edit</a></td>
         </tr>
       </table>
     </div>

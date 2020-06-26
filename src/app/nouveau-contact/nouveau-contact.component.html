@@ -5,7 +5,7 @@
       <form #f="ngForm" (ngSubmit)="onSaveContact(f.value)">
         <div class="form-group">
           <label class="control-label">Nom :</label>
-          <input class="form-control" required type="text" ngModel name="nom"/>
+          <input class="form-control" #nom="ngModel" required type="text" ngModel name="nom"/>
         </div>
         <div class="form-group">
           <label class="control-label">Prénom :</label>
