@@ -27,4 +27,8 @@ export class ContactsService {
   updateContact(contact: Contact): Observable<Contact>{
     return this.http.put<Contact>('http://localhost:9090/UpdateContact/' + contact.id, contact);
   }
+
+  deleteContact(contact: Contact){
+    return this.http.delete('http://localhost:9090/DeleteContacts/' + contact.id);
+  }
 }
